@@ -18,5 +18,5 @@ use App\Http\Controllers\Api\CompanyController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
+// add route for controller
 Route::apiResource('companies', CompanyController::class);
