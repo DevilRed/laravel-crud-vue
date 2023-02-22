@@ -2,6 +2,11 @@ import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 
+
+/*
+add vue
+npm install vue@latest vue-router@4
+*/
 export default defineConfig({
     plugins: [
         laravel({
@@ -11,6 +16,7 @@ export default defineConfig({
             ],
             refresh: true,
         }),
+        // add vue config to compile it
         vue({
             template: {
                 transformAssetUrls: {
@@ -26,3 +32,11 @@ export default defineConfig({
         },
     },
 });
+
+/*
+now create vue components
+
+We will have three routes: company index, create, and edit forms
+create routes file in resources/js/router/index.js
+
+*/
