@@ -1,5 +1,10 @@
 <?php
+/*
+validation
+php artisan make:request CompanyRequest
 
+We use those API Resource and Form Request classes inside of our app/Http/Controllers/API/CompanyController.php
+ */
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
