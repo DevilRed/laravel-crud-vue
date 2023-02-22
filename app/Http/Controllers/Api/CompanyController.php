@@ -1,5 +1,15 @@
 <?php
+/**
+ we create a Controller, with a few flags (https://twitter.com/PovilasKorop/status/1444611193956622337) to generate exactly what we need:
 
+php artisan make:controller Api/CompanyController --resource --api --model=Company
+
+--resource            generates empty methods
+--model=Company       Route model binding
+--api                 no need for methods create(), edit()
+
+controller using CompanyResource, CompanyRequest
+ */
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
