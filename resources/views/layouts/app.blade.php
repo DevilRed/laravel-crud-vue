@@ -14,6 +14,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
+        {{-- add the id to load the app --}}
         <div class="min-h-screen bg-gray-100" id="app">
             @include('layouts.navigation')
 

@@ -23,6 +23,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
+// load the dashboard on any other view coming from Vue Router
 Route::view('/{any}', 'dashboard')
     ->middleware('auth')
     ->where('any', '.*');

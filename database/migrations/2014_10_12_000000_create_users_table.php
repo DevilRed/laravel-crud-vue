@@ -1,5 +1,19 @@
 <?php
 
+// tutorial at  https://laraveldaily.com/post/laravel-8-vue-3-crud-composition-api
+/*
+laravel new project
+cd project
+// editing .env file here
+composer install
+php artisan migrate
+composer require laravel/breeze
+php artisan breeze:install
+ */
+
+
+
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
