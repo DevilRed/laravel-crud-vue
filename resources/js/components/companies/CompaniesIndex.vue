@@ -31,6 +31,7 @@
             </thead>
 
             <tbody class="bg-white divide-y divide-gray-200 divide-solid">
+<!--            loop over data-->
                 <template v-for="item in companies" :key="item.id">
                     <tr class="bg-white">
                         <td class="px-6 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
@@ -63,10 +64,15 @@
 </template>
 
 <script setup>
+// use composable
 import useCompanies from "@/composables/companies";
+// onMounted will define what method to "fire" automatically
 import { onMounted } from "vue";
 
+// extract data from composable
 const { companies, getCompanies, destroyCompany } = useCompanies()
+
+// mount data
 onMounted(getCompanies)
 const deleteCompany = async (id) => {
     if (!window.confirm('Are you sure?')) {
