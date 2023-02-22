@@ -2,11 +2,24 @@ import { ref } from 'vue'
 import axios from "axios";
 import { useRouter } from 'vue-router';
 
+/*
+To have a CRUD of Companies, we will use a Composition API thing called Composable
+it's kind of like a service in laravel
+
+the standard name of the function of Composable is useSomething(), and it doesn't necessarily need to be the same as the filename.
+ */
 export default function useCompanies() {
+    /*
+    "ref"  is from Vue API to make any variable reactive anywhere
+    */
     const companies = ref([])
     const company = ref([])
-    const router = useRouter()
     const errors = ref('')
+
+    /*
+    using vue router
+    */
+    const router = useRouter()
 
     const getCompanies = async () => {
         let response = await axios.get('/api/companies')
