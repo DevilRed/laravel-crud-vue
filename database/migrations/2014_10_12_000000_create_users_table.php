@@ -9,6 +9,7 @@ composer install
 php artisan migrate
 composer require laravel/breeze
 php artisan breeze:install
+http://vuecrud.localhost/dashboard
  */
 
 
