@@ -1,5 +1,8 @@
 <?php
-
+/**
+ php artisan make:model Company -m
+ php artisan migrate
+ */
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
