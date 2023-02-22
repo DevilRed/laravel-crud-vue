@@ -51,6 +51,7 @@
                                          class="mr-2 inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
                                 Edit
                             </router-link>
+<!--                          using delete event-->
                             <button @click="deleteCompany(item.id)"
                                     class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
                                 Delete
@@ -74,6 +75,8 @@ const { companies, getCompanies, destroyCompany } = useCompanies()
 
 // mount data
 onMounted(getCompanies)
+
+// call to the delete endpoint
 const deleteCompany = async (id) => {
     if (!window.confirm('Are you sure?')) {
         return
